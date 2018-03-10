@@ -15,7 +15,7 @@ public class ACSL3_Walk {
      * @param s the input
      * @return the output
      */
-    static String solve(String s) {
+    static String solve(String firstline, String s) {
         return s;
     }
 
@@ -34,8 +34,9 @@ public class ACSL3_Walk {
         }
 
         //main loop:
+        String firstline = scanin.nextLine();
         while(scanin.hasNext()) {
-            String answer = solve(scanin.nextLine());
+            String answer = solve(firstline, scanin.nextLine());
             System.out.print(answer);
             System.out.print(scanout!=null && scanout.hasNext()?(answer.equals(scanout.nextLine())?" CORRECT":" INCORRECT"):"");
             System.out.println();
